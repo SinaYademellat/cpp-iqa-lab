@@ -9,10 +9,12 @@ int main() {
         return -1;
     }
 
-    std::cout << "--- Loaded Image Specifications ---" << std::endl;
-    std::cout << "Width    : " << image.cols << " pixels" << std::endl;
-    std::cout << "Height   : " << image.rows << " pixels" << std::endl;
-    std::cout << "Channels : " << image.channels() << " (e.g., 3 for BGR)" << std::endl;
+    cv::imshow("B", image);
+    std::cout<< "----" << std::endl;
+    cv::waitKey(0);
+    cv::destroyAllWindows();
 
     return 0;
 }
+
+// export QT_QPA_PLATFORM=xcb
